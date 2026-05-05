@@ -1,0 +1,44 @@
+.main-review {
+
+  .review-tabs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .nav-link {
+      white-space: nowrap;
+      cursor: pointer;
+    }
+  }
+
+  .review-content {
+    h2 {
+      margin-bottom: 10px;
+      font-weight: 600;
+      font-size: 24px;
+    }
+  }
+
+
+}
+
+@media (max-width: 576px) {
+  .main-review {
+    .review-tabs {
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .review-content h2 {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main-review {
+    .review-tabs {
+      justify-content: space-around;
+    }
+  }
+}

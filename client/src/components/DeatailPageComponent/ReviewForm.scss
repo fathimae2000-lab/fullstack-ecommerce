@@ -1,0 +1,38 @@
+.write{
+
+    width: 100%;
+    .review-form-container {
+  max-width: 500px;
+
+  .review-form {
+    border-radius: 12px;
+    background: #fff;
+
+    h5 {
+      font-weight: 600;
+      text-align: center;
+    }
+
+    input,
+    textarea {
+      border-radius: 8px;
+      border: 1px solid #ddd;
+
+      &:focus {
+        border-color: #000;
+        box-shadow: none;
+      }
+    }
+
+    button {
+      border-radius: 8px;
+      font-weight: 500;
+      transition: 0.3s;
+
+      &:hover {
+        background: #333;
+      }
+    }
+  }
+}
+}

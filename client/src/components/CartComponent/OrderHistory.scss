@@ -1,0 +1,225 @@
+// OrderHistory.scss
+
+.order-history {
+  min-height: 80vh;
+  padding: 2.5rem 1rem;
+
+  .oh-header {
+    margin-bottom: 2rem;
+
+    h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #111;
+    }
+
+    p {
+      color: #9ca3af;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+  }
+
+  // ── empty state ──
+  .oh-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+    text-align: center;
+
+    .oh-empty__icon {
+      width: 80px;
+      height: 80px;
+      background: #f9fafb;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+
+      svg {
+        color: #d1d5db;
+      }
+    }
+
+    h5 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #374151;
+      margin-bottom: 0.4rem;
+    }
+
+    p {
+      color: #9ca3af;
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-shop {
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 0.7rem 2rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &:hover {
+        background: #333;
+      }
+    }
+  }
+
+  // ── order card ──
+  .oh-card {
+    background: #fff;
+    border: 1.5px solid #f3f4f6;
+    border-radius: 18px;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    transition: box-shadow 0.2s;
+
+    &:hover {
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+    }
+
+    // top row: order id + status badge
+    .oh-card__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      .oh-card__id {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #111;
+      }
+
+      .oh-status {
+        padding: 4px 14px;
+        border-radius: 20px;
+        font-size: 0.78rem;
+        font-weight: 600;
+
+        &.pending {
+          background: #fef9c3;
+          color: #854d0e;
+        }
+
+        &.shipped {
+          background: #dbeafe;
+          color: #1d4ed8;
+        }
+
+        &.delivered {
+          background: #dcfce7;
+          color: #15803d;
+        }
+
+        &.cancelled {
+          background: #fee2e2;
+          color: #dc2626;
+        }
+      }
+    }
+
+    // divider
+    .oh-divider {
+      border: none;
+      border-top: 1px solid #f3f4f6;
+      margin: 1rem 0;
+    }
+
+    // info grid: date, address, payment
+    .oh-card__info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+
+      .oh-info-item {
+        label {
+          display: block;
+          font-size: 0.75rem;
+          color: #9ca3af;
+          margin-bottom: 2px;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+        }
+
+        span {
+          font-size: 0.875rem;
+          font-weight: 500;
+          color: #374151;
+        }
+      }
+
+      // address takes full width
+      .oh-info-item--full {
+        grid-column: 1 / -1;
+      }
+    }
+
+    // bottom row: total + button
+    .oh-card__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .oh-total {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #111;
+
+        span {
+          font-size: 0.8rem;
+          font-weight: 400;
+          color: #9ca3af;
+          margin-right: 4px;
+        }
+      }
+
+      .oh-detail-btn {
+        background: transparent;
+        border: 1.5px solid #e5e7eb;
+        border-radius: 50px;
+        padding: 0.4rem 1.2rem;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: #111;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+          background: #111;
+          color: #fff;
+          border-color: #111;
+        }
+      }
+    }
+  }
+}
+
+// ── mobile ──
+@media (max-width: 576px) {
+  .order-history {
+    padding: 1.5rem 0.75rem;
+
+    .oh-card {
+      padding: 1.25rem;
+
+      .oh-card__info {
+        grid-template-columns: 1fr;
+
+        .oh-info-item--full {
+          grid-column: 1;
+        }
+      }
+    }
+  }
+}

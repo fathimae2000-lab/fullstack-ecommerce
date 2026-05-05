@@ -1,0 +1,37 @@
+.selling {
+  top: 991px;
+  left: 518px;
+  text-align: center;
+  padding-top: 70px;
+}
+.selling h2 {
+  font-weight: 900;
+  font-family: "Integral CF", sans-serif;
+  font-size: 48px;
+  padding-bottom: 40px;
+  color: rgb(0, 0, 0);
+}
+.selling .view-all-btn {
+  width: 25%;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+}
+@media (max-width: 992px) {
+  .selling .view-all-btn {
+    width: 40%;
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 768px) {
+  .selling .view-all-btn {
+    width: 50%;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 576px) {
+  .selling .view-all-btn {
+    width: 70%;
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+  }
+}/*# sourceMappingURL=TopSelling.css.map */

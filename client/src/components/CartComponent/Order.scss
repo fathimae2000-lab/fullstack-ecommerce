@@ -1,0 +1,98 @@
+.order {
+  width: 100%;
+  max-width: 500px;   // ✅ instead of fixed width
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 24px;
+  background: #fff;
+  max-height: 458px;
+  margin: auto;       // ✅ center on all screens
+
+  p:first-child {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  /* rows */
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  /* total */
+  > div:last-of-type {
+    margin-top: 10px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    p {
+      font-weight: 600;
+      font-size: 20px;
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+
+  /* button */
+  button {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 30px;
+    padding: 12px;
+    font-weight: 600;
+  }
+}
+
+/* ============================== */
+/* 📱 Tablet (<=768px) */
+/* ============================== */
+@media (max-width: 768px) {
+  .order {
+    padding: 20px;
+  }
+
+  .order p:first-child {
+    font-size: 18px;
+  }
+
+  .order > div p {
+    font-size: 15px;
+  }
+}
+
+/* ============================== */
+/* 📱 Mobile (<=480px) */
+/* ============================== */
+@media (max-width: 480px) {
+  .order {
+    padding: 16px;
+    border-radius: 15px;
+  }
+
+  .order p:first-child {
+    font-size: 16px;
+  }
+
+  .order > div {
+    flex-direction: column;        // ✅ stack rows
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .order > div:last-of-type p {
+    font-size: 18px;
+  }
+
+  .order button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

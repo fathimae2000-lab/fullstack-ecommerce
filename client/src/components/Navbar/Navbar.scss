@@ -1,0 +1,70 @@
+@use "../../styles/base.scss" as *;
+
+.custom-navbar {
+  z-index: 1055;
+  position: relative;
+
+  .first-navbar {
+    background-color: $primary-color;
+    min-height: 38px; // 
+
+    span {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  .second-navbar {
+    display: flex;              // ✅ FIX
+    align-items: center;        // ✅ vertical align
+    justify-content: space-between; // ✅ spacing
+    
+    .logo {
+      font-weight: 900;
+      font-size: 32px;
+    }
+
+    .items {
+      display: flex;
+      gap: 20px;
+
+      li a {
+        font-size: 16px;
+        font-weight: 400;
+    width: 120px;
+
+      }
+    }
+  }
+
+  .search {
+    position: relative;
+    width: 100%;           // ✅ responsive
+
+    .search-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $third-color;
+      font-size: 16px;
+      pointer-events: none;
+    }
+
+    input {
+      width: 100%;         // ✅ FIX (instead of 577px)
+      max-width: 577px;    // ✅ optional limit
+      height: 48px;
+      border-radius: 62px;
+      padding: 12px 16px 12px 45px;
+      background-color: $secondary-color;
+      outline: none;
+      border: none;
+
+      &::placeholder {
+        color: $third-color;
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.product-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+}
+.product-card img {
+  width: 295px;
+  height: 298px;
+  top: 1104px;
+  left: 100px;
+  border-radius: 20px;
+  background-color: rgb(240, 238, 237);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.product-card h5 {
+  font-weight: 700;
+  font-family: "Satoshi", sans-serif;
+  font-size: 20px;
+}
+.product-card p {
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Satoshi", sans-serif;
+}
+.product-card .rating {
+  font-size: 20px;
+}
+.product-card .rating-value {
+  font-size: 0.9rem;
+  vertical-align: middle;
+  color: #000;
+}/*# sourceMappingURL=Card.css.map */

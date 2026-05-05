@@ -1,0 +1,141 @@
+.heading {
+  font-weight: 900;
+  font-family: 'Integral CF', sans-serif;
+  font-size: 40px;
+  padding-bottom: 40px;
+  color: rgba(0, 0, 0, 1);
+}
+
+/* MAIN CONTAINER */
+.carts {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CART ITEM */
+.cart-item {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* IMAGE */
+.cart-item img {
+  border-radius: 9px;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* INFO */
+.cart-info {
+  font-family: 'Satoshi', sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* LEFT TEXT */
+.cart-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.price{
+    display: flex;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* RIGHT SIDE */
+.side-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.delete {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.cart-btn {
+  border-radius: 62px;
+  padding: 10px 16px;
+  background-color: rgba(240, 240, 240, 1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-btn svg {
+  cursor: pointer;
+}
+
+/* ================================= */
+/* 📱 MOBILE RESPONSIVE */
+/* ================================= */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cart-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .side-cart {
+    align-items: center;
+  }
+
+  .cart-btn {
+    justify-content: center;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+}
+
+/* ================================= */
+/* 📱 SMALL MOBILE */
+/* ================================= */
+@media (max-width: 480px) {
+  .cart-item img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}

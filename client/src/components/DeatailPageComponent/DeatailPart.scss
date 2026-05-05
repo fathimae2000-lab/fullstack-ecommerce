@@ -1,0 +1,152 @@
+.detail-main {
+  padding: 20px;
+
+  .breadcrumb {
+    margin-bottom: 20px;
+
+    li {
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.6);
+
+      @media (min-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  // IMAGE SECTION
+  .img-section {
+
+    .box img {
+      width: 100%;
+      max-width: 100px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    .big-img img {
+      width: 100%;
+      border-radius: 20px;
+      object-fit: contain;
+        
+      @media (min-width: 768px) {
+        max-width: 400px;
+      }
+    }
+  }
+
+  // RIGHT
+  .right {
+
+    h2 {
+      font-size: 24px;
+      font-weight: 900;
+        
+      @media (min-width: 768px) {
+        font-size: 32px;
+      }
+
+      @media (min-width: 992px) {
+        font-size: 40px;
+      }
+    }
+       .rating {
+    font-size:24px;
+  }
+  .price{
+    font-size: 18px;
+  }
+    p {
+      margin-top: 10px;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.6);
+      
+
+      @media (min-width: 768px) {
+        font-size: 16px;
+      }
+    }
+    
+
+   
+  }
+
+  // COLORS
+  .color-section {
+    .color-box {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .green { background: #30260d; }
+    .red { background: #04301e; }
+    .blue { background: #071620; }
+
+    input:checked + .color-box {
+      border: 2px solid #000;
+    }
+  }
+
+  // SIZE
+  .size-section {
+  .size-box {
+    min-width: 100px;
+    height: 46px;
+    border-radius: 62px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+        color: rgba(0, 0, 0, 0.6);
+     input:checked + .size-box {
+      background: #000;
+      color: #fff;
+    }
+    // ✅ Mobile
+    @media (max-width: 576px) {
+      min-width: 70px;
+      height: 40px;
+      font-size: 14px;
+    }
+  }
+}
+   
+}
+
+  // QUANTITY
+ .quantity-box {
+  background: #f5f5f5;
+  border-radius: 30px;
+  padding: 10px;
+  max-width: 170px;
+
+  .qty-btn {
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  // ✅ Mobile
+  @media (max-width: 576px) {
+    max-width: 140px;
+    padding: 8px;
+
+    .qty-btn {
+      font-size: 14px;
+    }
+  }
+}
+  // BUTTON
+  .cart {
+    background: #000;
+    color: #fff;
+    border: none;
+    height: 50px;
+    border-radius: 30px;
+  }

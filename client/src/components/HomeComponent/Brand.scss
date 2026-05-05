@@ -1,0 +1,26 @@
+.brand {
+  margin: 70px 0;
+    background-color:rgba(0, 0, 0, 1);
+    padding: 20px;
+
+  img {
+    max-height: 80px; // set a consistent height for logos
+    object-fit: contain; // keeps logo aspect ratio
+    padding: 10px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1); // subtle zoom on hover
+    }
+
+    @media (max-width: 768px) {
+      max-height: 60px;
+      padding: 8px;
+    }
+
+    @media (max-width: 576px) {
+      max-height: 50px;
+      padding: 5px;
+    }
+  }
+}

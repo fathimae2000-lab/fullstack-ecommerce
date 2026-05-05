@@ -1,0 +1,37 @@
+.review {
+  margin-top: 50px;
+
+  h2 {
+    font-weight: 900;
+    font-family: 'Integral CF', sans-serif;
+    font-size: 48px;
+    padding-bottom: 20px;
+    color: rgba(0, 0, 0, 1);
+  }
+
+  .review-box {
+    transition: 0.3s ease;
+    max-width: 400px;
+    height: 240px;
+    border-radius: 20px;
+    margin: 0 auto;
+    border: 1px solid grey;
+    padding: 28px 32px;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  .review-name {
+    font-size: 16px;
+    color: #000;
+    font-family: 'Satoshi', sans-serif;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Satoshi', sans-serif;
+  }
+}

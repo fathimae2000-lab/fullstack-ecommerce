@@ -1,0 +1,36 @@
+.arrival{
+    top: 991px;
+    left: 518px;
+    text-align: center;
+    padding-top: 70px;
+    h2{
+        font-weight: 900;
+        font-family: 'Integral CF',sans-serif;
+        font-size: 48px;
+        padding-bottom: 40px;        
+        color: rgba(0, 0, 0, 1);  
+    }
+    hr{
+        margin-top: 70px;
+    }
+
+  
+
+  @media (max-width: 992px) { // tablets
+    width: 40%;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 768px) { // small tablets
+    width: 50%;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 576px) { // mobile
+    width: 70%;
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+

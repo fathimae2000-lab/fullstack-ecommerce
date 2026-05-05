@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("../assets/fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IntegralCF";
+  src: url("./assets/fonts/IntegralCF-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IntegralCF";
+  src: url("./assets/fonts/IntegralCF-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Apply globally */
+body {
+  font-family: "Satoshi", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+.custom-navbar {
+  z-index: 1055;
+  position: relative;
+}
+.custom-navbar .first-navbar {
+  background-color: rgb(0, 0, 0);
+  min-height: 38px;
+}
+.custom-navbar .first-navbar span {
+  font-size: 14px;
+  font-weight: 400;
+}
+.custom-navbar .second-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.custom-navbar .second-navbar .logo {
+  font-weight: 900;
+  font-size: 32px;
+}
+.custom-navbar .second-navbar .items {
+  display: flex;
+  gap: 20px;
+}
+.custom-navbar .second-navbar .items li a {
+  font-size: 16px;
+  font-weight: 400;
+  width: 120px;
+}
+.custom-navbar .search {
+  position: relative;
+  width: 100%;
+}
+.custom-navbar .search .search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(173, 173, 173, 0.897);
+  font-size: 16px;
+  pointer-events: none;
+}
+.custom-navbar .search input {
+  width: 100%;
+  max-width: 577px;
+  height: 48px;
+  border-radius: 62px;
+  padding: 12px 16px 12px 45px;
+  background-color: rgb(242, 240, 241);
+  outline: none;
+  border: none;
+}
+.custom-navbar .search input::-moz-placeholder {
+  color: rgba(173, 173, 173, 0.897);
+  font-size: 16px;
+}
+.custom-navbar .search input::placeholder {
+  color: rgba(173, 173, 173, 0.897);
+  font-size: 16px;
+}/*# sourceMappingURL=Navbar.css.map */

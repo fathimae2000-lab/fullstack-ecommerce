@@ -1,0 +1,29 @@
+.main-review .review-tabs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.main-review .review-tabs .nav-link {
+  white-space: nowrap;
+  cursor: pointer;
+}
+.main-review .review-content h2 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+@media (max-width: 576px) {
+  .main-review .review-tabs {
+    justify-content: center;
+    gap: 12px;
+  }
+  .main-review .review-content h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .main-review .review-tabs {
+    justify-content: space-around;
+  }
+}/*# sourceMappingURL=MainReview.css.map */
