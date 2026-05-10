@@ -1,5 +1,7 @@
 const express = require('express');
+
 require('dotenv').config({ path: './config/config.env' });
+
 const cors = require('cors');
 const path = require('path');
 
@@ -28,7 +30,6 @@ app.use('/api/auth',users)
 const cart=require('./routes/cart')
 
 app.use('/api/cart',cart)
-// ✅ FIXED STATIC FILE PATH
 
 app.use('/products', express.static(path.join(__dirname, 'public/products')));
 

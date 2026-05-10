@@ -17,7 +17,7 @@ function TopSelling() {
 
   return (
     <>
-      <div className='container selling'>
+      <div className=' selling'>
         <h2>TOP SELLING</h2>
         <div className='d-flex align-items-center justify-content-center gap-3 flex-wrap'>
           {visibleProducts.map(product =>(

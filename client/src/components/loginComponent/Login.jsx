@@ -38,12 +38,9 @@ function Login() {
         return
       }
 
-      // ✅ fix 1: save real user from API response
       localStorage.setItem("user", JSON.stringify(data.data.user))
-      // ✅ fix 2: save token
       localStorage.setItem("token", data.data.token)
 
-      // ✅ fix 3: navigate back to where user came from
       navigate(from)
 
     } catch (err) {

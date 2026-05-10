@@ -18,7 +18,7 @@ function Review() {
 
   return (
 
-    <div className="review container py-5">
+    <div className="review  py-5">
       <h2 className="text-center ">OUR HAPPY CUSTOMER</h2>
 
          <div className="d-flex flex-wrap gap-1">

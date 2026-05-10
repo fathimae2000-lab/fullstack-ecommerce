@@ -15,7 +15,7 @@ function NewArrival() {
 
   return (
     <>
-      <div className='container arrival'>
+      <div className=' arrival'>
         <h2>NEW ARRIVALS</h2>
         <div className='d-flex flex-wrap gap-3 align-items-center justify-content-center'>
             {visibleProducts.map(product =>(

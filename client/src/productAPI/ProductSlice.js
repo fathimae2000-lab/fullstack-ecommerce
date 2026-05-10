@@ -5,9 +5,9 @@ import {
   fetchReviewsById,
   addReview,
   fetchReviews,
-  placeOrder,         // ✅ new
-  fetchOrdersByUser,  // ✅ new
-  fetchOrderById,     // ✅ new
+  placeOrder,         // new
+  fetchOrdersByUser,  // new
+  fetchOrderById,     // new
 } from "../productAPI/ProductThunk";
 
 const BASE_URL = "http://localhost:5000/products/";
@@ -23,7 +23,7 @@ const initialState = {
   reviewLoading: false,
   allReviewLoading: false,
 
-  // ✅ new order states
+  // new order states
   orderLoading: false,
   orderSuccess: false,
   orders: [],
@@ -40,7 +40,7 @@ const initialState = {
   selectedCategory: ""
 };
 
-// ✅ CALCULATE TOTAL
+// CALCULATE TOTAL
 const calculateTotalPrice = (state) => {
   state.totalPrice = state.productCart.reduce((total, item) => {
     const price = Number(item.offerprice || item.price)
@@ -54,7 +54,7 @@ const productSlice = createSlice({
 
   reducers: {
 
-    // 🟢 ADD TO CART
+    //  ADD TO CART
     addToCart: (state, action) => {
       const item = action.payload;
       const existing = state.productCart.find(i => i.id === item.id);
@@ -67,7 +67,7 @@ const productSlice = createSlice({
       calculateTotalPrice(state);
     },
 
-    // 🟢 INCREMENT
+    //  INCREMENT
     increment: (state, action) => {
       const item = state.productCart.find(i => i.id === action.payload);
       if (item) {
@@ -77,7 +77,7 @@ const productSlice = createSlice({
       }
     },
 
-    // 🟢 DECREMENT
+    //  DECREMENT
     decrement: (state, action) => {
       const item = state.productCart.find(i => i.id === action.payload);
       if (item) {
@@ -92,7 +92,7 @@ const productSlice = createSlice({
       }
     },
 
-    // 🟢 REMOVE ITEM
+    //  REMOVE ITEM
     removeFromCart: (state, action) => {
       state.productCart = state.productCart.filter(
         item => item.id !== action.payload
@@ -100,28 +100,28 @@ const productSlice = createSlice({
       calculateTotalPrice(state);
     },
 
-    // 🟢 CLEAR CART
+    //  CLEAR CART
     clearCart: (state) => {
       state.productCart = [];
       state.productCount = 0;
       state.totalPrice = 0;
     },
 
-    // 🟢 CLEAR DETAILS
+    //  CLEAR DETAILS
     cleardetails: (state) => {
       state.details = null;
       state.reviews = [];
       state.error = null;
     },
 
-    // ✅ new - reset order state when needed
+    // new - reset order state when needed
     clearOrderState: (state) => {
       state.orderSuccess = false;
       state.orderError = null;
       state.currentOrder = null;
     },
 
-    // 🟢 FILTER CATEGORY
+    //  FILTER CATEGORY
     setCategoryFilter: (state, action) => {
       state.selectedCategory = action.payload;
       if (action.payload === "All") {
@@ -203,7 +203,7 @@ const productSlice = createSlice({
         state.error = action.error.message;
       })
 
-      // ✅ PLACE ORDER
+      // PLACE ORDER
       .addCase(placeOrder.pending, (state) => {
         state.orderLoading = true;
         state.orderSuccess = false;
@@ -220,7 +220,7 @@ const productSlice = createSlice({
         state.orderError = action.payload || 'Order failed';
       })
 
-      // ✅ FETCH ALL ORDERS BY USER
+      // FETCH ALL ORDERS BY USER
       .addCase(fetchOrdersByUser.pending, (state) => {
         state.orderLoading = true;
         state.orderError = null;
@@ -234,7 +234,7 @@ const productSlice = createSlice({
         state.orderError = action.payload || 'Failed to fetch orders';
       })
 
-      // ✅ FETCH SINGLE ORDER
+      // FETCH SINGLE ORDER
       .addCase(fetchOrderById.pending, (state) => {
         state.orderLoading = true;
         state.orderError = null;
@@ -250,7 +250,7 @@ const productSlice = createSlice({
   },
 });
 
-// ✅ EXPORTS
+// EXPORTS
 export const {
   addToCart,
   increment,
@@ -258,7 +258,7 @@ export const {
   removeFromCart,
   clearCart,
   cleardetails,
-  clearOrderState,  // ✅ new
+  clearOrderState,  // new
   setCategoryFilter
 } = productSlice.actions;
 

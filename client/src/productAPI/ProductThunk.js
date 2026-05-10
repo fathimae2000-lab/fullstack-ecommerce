@@ -56,7 +56,6 @@ export const addReview = createAsyncThunk(
   }
 )
 
-// ✅ Place order
 export const placeOrder = createAsyncThunk(
   'orders/place',
   async (orderData, { rejectWithValue }) => {
@@ -81,7 +80,6 @@ export const placeOrder = createAsyncThunk(
   }
 )
 
-// ✅ Get orders by user ID
 export const fetchOrdersByUser = createAsyncThunk(
   'orders/fetchByUser',
   async (userId, { rejectWithValue }) => {
@@ -103,7 +101,6 @@ export const fetchOrdersByUser = createAsyncThunk(
   }
 )
 
-// ✅ Get single order by ID
 export const fetchOrderById = createAsyncThunk(
   'orders/fetchById',
   async (orderId, { rejectWithValue }) => {
