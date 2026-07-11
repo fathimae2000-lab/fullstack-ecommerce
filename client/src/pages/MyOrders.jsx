@@ -9,12 +9,14 @@ function MyOrders() {
   const [loading, setLoading] = useState(true)
   const navigate = useNavigate()
 
+    const API_URL = import.meta.env.VITE_API_URL;
+
   useEffect(() => {
     const fetchOrders = async () => {
       const user = JSON.parse(localStorage.getItem('user') || 'null')
       if (!user) { navigate('/login'); return }
       try {
-        const res = await fetch(`http://localhost:5000/api/orders/user/${user.id}`)
+        const res = await fetch(`${API_URL}/api/orders/user/${user.id}`)
         const data = await res.json()
         if (res.ok) setOrders(data.data)
       } catch (err) {

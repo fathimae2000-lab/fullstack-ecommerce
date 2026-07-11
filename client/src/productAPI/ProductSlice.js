@@ -10,7 +10,10 @@ import {
   fetchOrderById,     // new
 } from "../productAPI/ProductThunk";
 
-const BASE_URL = "http://localhost:5000/products/";
+  const API_URL = import.meta.env.VITE_API_URL;
+
+
+const BASE_URL =  `${API_URL}/products/`;
 
 const initialState = {
   productList: [],
