@@ -1,8 +1,13 @@
-const errorHandler=(error,req,res,next)=>{
-    console.error("🔥 ACTUAL SERVER ERROR:", err.stack || err); 
-    res.status(error.statusCode || 500).json({
-        message:error.message || "Server Error"
-    })
-}
+const errorHandler = (err, req, res, next) => {
+    console.error("🔥 Server Error Caught:", err);
 
-module.exports=errorHandler;
+    const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
+    
+    res.status(statusCode).json({
+        success: false,
+        message: err.message || "Internal Server Error",
+        stack: process.env.NODE_ENV === 'production' ? null : err.stack
+    });
+};
+
+module.exports = errorHandler;
