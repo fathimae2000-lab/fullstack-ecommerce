@@ -11,6 +11,7 @@ FROM products
 JOIN categories 
 ON products.category_id = categories.id
 `
+
 const getProductById = `
 SELECT 
   products.id,
@@ -25,12 +26,11 @@ JOIN categories
 ON products.category_id = categories.id
 WHERE products.id = $1
 `
-const createProduct='INSERT INTO products(product_name, image, price, offerprice, category_id, rating) VALUES ($1,$2,$3,$4,$5,$6)'
 
+const createProduct = 'INSERT INTO products(product_name, image, price, offerprice, category_id, rating) VALUES ($1,$2,$3,$4,$5,$6)'
 
-module.exports={
+module.exports = {
     getProducts,
     getProductById,
     createProduct,
-
 }
