@@ -9,6 +9,9 @@ function ReviewForm({ setShowForm }) {
   const dispatch = useDispatch()
   const token = localStorage.getItem("token")
 
+      const API_URL = import.meta.env.VITE_API_URL;
+
+
   const [form, setForm] = useState({
     rating: "",
     comment: "",
@@ -40,7 +43,7 @@ function ReviewForm({ setShowForm }) {
     }
 
     try {
-      const response = await fetch("http://t:5000/api/reviews", {
+      const response = await fetch(`${API_URL}/api/reviews`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
