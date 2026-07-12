@@ -43,7 +43,7 @@ function ReviewForm({ setShowForm }) {
     }
 
     try {
-      const response = await fetch(`${API_URL}/api/reviews`, {
+      const response = await fetch(`${API_URL}/reviews`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -16,7 +16,7 @@ function MyOrders() {
       const user = JSON.parse(localStorage.getItem('user') || 'null')
       if (!user) { navigate('/login'); return }
       try {
-        const res = await fetch(`${API_URL}/api/orders/user/${user.id}`)
+        const res = await fetch(`${API_URL}/orders/user/${user.id}`)
         const data = await res.json()
         if (res.ok) setOrders(data.data)
       } catch (err) {
