@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaMinus, FaPlus, FaTrash } from 'react-icons/fa'
-import './cartItems.scss'
+import './CartItems.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { decrement, increment, removeFromCart } from '../../productAPI/ProductSlice'
 
